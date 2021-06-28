@@ -9,9 +9,15 @@ class App extends Component {
     termino: 'Café'
   }
 
+  cosultarApi = () => {
+    const url = `https://pixabay.com/api/?key=19963715-4f70db65d59908dc7a1a2b103&q=${this.state.termino}`;
+  }
+
   datosBusqueda = (termino) => {
     this.setState({
       termino
+    }, () => {
+      this.consultarApi();
     })
   }
 
