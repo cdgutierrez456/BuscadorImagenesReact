@@ -5,8 +5,14 @@ import Buscador from './components/Buscador';
 
 class App extends Component {
 
+  state = {
+    termino: 'Café'
+  }
+
   datosBusqueda = (termino) => {
-    console.log(termino);
+    this.setState({
+      termino
+    })
   }
 
   render() {
@@ -18,6 +24,7 @@ class App extends Component {
             datosBusqueda={this.datosBusqueda}
           />
         </div>
+        {this.state.termino}
       </div>
     );
   }
