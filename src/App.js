@@ -39,7 +39,9 @@ class App extends Component {
             datosBusqueda={this.datosBusqueda}
           />
         </div>
-        <Resultado/>
+        <Resultado
+          imagenes = {this.state.imagenes}
+        />
       </div>
     );
   }
