@@ -12,7 +12,10 @@ class Resultado extends Component {
             <React.Fragment>
                 <div className="col-12 p-5 row">
                     {imagenes.map(imagen => (
-                        <Imagen></Imagen>
+                        <Imagen
+                            key = {imagen.id}
+                            imagen = {imagen}
+                        />
                     ))}
                 </div>
             </React.Fragment>
